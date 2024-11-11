@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    // IntじゃなくてEnumでじゃんけんを管理してみてください
+    // @StateではなくObservableObjectなどを使ってコードを書いてみてください
     @State var jankenNumber = 0
     let gradient = LinearGradient(gradient: Gradient(colors: [.red, .blue]), startPoint: .topLeading, endPoint: .bottomTrailing)
 
@@ -25,7 +27,8 @@ struct ContentView: View {
                 Spacer()
                 if jankenNumber == 0 {
                     Text("これからじゃんけんをします！")
-                        .padding(.bottom)
+                        .padding(.bottom) 
+                // インデント・スペースが汚いので、https://github.com/swiftlang/swift-formatでフォーマットしてみて下さい
                 }else if jankenNumber == 1{
                     Image(.gu)
                         .renderingMode(.template)
